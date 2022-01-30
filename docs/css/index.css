@@ -89,7 +89,7 @@ main {
     align-content: center;
     margin: 0 auto;
     border: 1px solid black;
-    background-image: url(../../images/background_image.jpg);
+    background-image: url(../images/background_image.jpg);
     background-repeat: no-repeat, repeat;
     background-position: center;
     background-size: cover;
