@@ -1,0 +1,188 @@
+main {
+    width: 100%;
+    border: 1px solid black;
+    .rowOne {
+        display: flex;
+        flex-direction: column;
+        // margin-left: -8px;
+        // margin-right: -8px;
+        width: 100%;
+        height: 90vh;
+        // background-color: rgb(204, 173, 224);
+        justify-content: center;
+        align-content: center;
+        margin: 0 auto;
+        border: 1px solid black;
+        background-image: url(../../images/background_image.jpg);
+        background-repeat: no-repeat, repeat;
+        background-position: center;
+        background-size: cover;
+        // opacity: 0.90;
+        // background-attachment: fixed;
+        .titleContainer{
+            // align-self: center;
+            width: 50%;
+            background: rgb(0, 0, 0);
+            background: rgba(0, 0, 0, 0.5);
+            // border: rgb(255, 255, 255) 1px solid;
+            h1{
+                // border: rgb(255, 255, 255) 1px solid;
+                text-align: center;
+                padding: 1.5rem 3rem;
+                color: white;
+
+            }
+        }
+        .subtitleContainer{
+            // align-self: center;
+            width: 50%;
+            background: rgb(0, 0, 0);
+            background: rgba(0, 0, 0, 0.5);
+            // border: rgb(253, 253, 253) 1px solid;
+            h5{
+
+                text-align: center;
+                // border: rgb(253, 253, 253) 1px solid;
+                color: white;
+                padding: 1.5rem 3rem;
+            }
+
+        }
+
+        
+        // .rowOne__cell {
+        //     padding-left: 16px;
+        //     padding-right: 16px;
+        //     align-self: center;
+        // }
+        
+        /* Cell with given width. Replace 25% with whatever you want */
+        // .rowOne__cell--1-4 {
+        //     flex: 0 0 50%;
+        //     border: 1px black solid;
+        //     h1{
+        //         border: purple 1px solid;
+        //     }
+        // }
+        
+        // .rowOne__cell--fill {
+        //     flex: 1;
+        //     border: ridge 1px black;
+        // }
+    }
+    .rowTwo {
+        border-top: brown 1px solid;
+        // display: flex;
+        // margin-left: -8px;
+        // margin-right: -8px;
+        width: 90%;
+        margin: 0 auto;
+        height: 120vh;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+        .rowTwo--title{
+            grid-area: 1 / 1 / 2 / 5;
+            background-color: blueviolet;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            h2{
+                border: 1px solid black;
+                height: fit-content;
+                align-self: center;
+            }
+        }
+        .rowTwo--dPenal{
+            grid-area: 2 / 1 / 5 / 2;
+            background-color: cadetblue;
+        }
+        .rowTwo--dLaboral{
+            grid-area: 2 / 2 / 5 / 3;
+            background-color: chocolate;
+        }
+        .rowTwo--dCivil{
+            grid-area: 2 / 3 / 5 / 4;
+            background-color: darkblue;
+        }
+        .rowTwo--dReales{
+            grid-area: 2 / 4 / 5 / 5;
+            background-color: darkgreen;
+        }
+        // background-color: rgb(204, 173, 224);
+        // justify-items: center;
+        // align-items: center;
+    
+        // .rowTwo__cell {
+        //     padding-left: 8px;
+        //     padding-right: 8px;
+        // }
+        
+        /* Cell with given width. Replace 25% with whatever you want */
+        // .rowTwo__cell--1-4 {
+        //     flex: 0 0 50%;
+        //     border: 1px black solid;
+        // }
+        
+        // .rowTwo__cell--fill {
+        //     flex: 1;
+        //     border: ridge 1px black;
+        // }
+    }
+    
+}
+
+
+@media (max-width: 480px){
+    main {
+        .rowOne{
+            .titleContainer{
+                width: 100%;
+                // align-self: none;
+                h1{
+                    font-size: 2.9rem;
+                    // width: 60%;
+                }
+            }
+            .subtitleContainer{
+                width: 100%;
+            }
+        }
+        .rowTwo {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(5, 1fr);
+            .rowTwo--title{
+                grid-area: 1 / 1 / 2 / 2;
+                background-color: blueviolet;
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                // h2{
+                //     border: 1px solid black;
+                //     height: fit-content;
+                //     align-self: center;
+                // }
+            }
+            .rowTwo--dPenal{
+                grid-area: 2 / 1 / 3 / 2;
+                background-color: cadetblue;
+            }
+            .rowTwo--dLaboral{
+                grid-area: 3 / 1 / 4 / 2;
+                background-color: chocolate;
+            }
+            .rowTwo--dCivil{
+                grid-area: 4 / 1 / 5 / 2;
+                background-color: darkblue;
+            }
+            .rowTwo--dReales{
+                grid-area: 5 / 1 / 6 / 2;
+                background-color: darkgreen;
+            }
+        }
+    }
+
+}
